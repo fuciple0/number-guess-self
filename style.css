@@ -1,0 +1,48 @@
+body {
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .container {
+    border: 10px solid white;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(255, 229, 202, 0.7);
+  }
+  
+  .border-line {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .main-img {
+    width: 500px;
+   
+  }
+
+  .form-control {
+    height: 60px;
+    width: 50%;
+    font-size: 3vw;
+    margin-right: 0px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 48rem) {
+  
+    .main-img {
+      width: 40vw;
+    }
+    .form-control {
+      font-size: 8vw;
+      max-width: 500px;
+      margin-right: 0px;
+    }
+  }
+  
