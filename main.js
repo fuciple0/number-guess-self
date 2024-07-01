@@ -28,7 +28,7 @@ popRandomNumber()//랜덤 숫자 함수 호출
 //playButton에 이벤트 리스너 추가
 playButton.addEventListener('click', playrun)
 
-//userinput 이벤트 리스너 추가
+//userinput 이벤트 리스너 추가(인풋창 자동 초기화)
 userInput.addEventListener('focus',function(){userInput.value=""})
 
 //playrun 함수
@@ -61,7 +61,7 @@ function playrun(){
         resultlabel.textContent = "축하합니다. 정답입니다."
         playButton.disabled = true
         mainImg.setAttribute("src","/image/answer.gif")
-        return
+        return //정답이면  버튼 비활성화, 이미지 변경후 리턴문으로 빠져나감.
     }
  
     //기회 소진시 버튼 차단
@@ -96,7 +96,7 @@ function reset(){
     chance = 3
     trylabel.textContent = `입력값 : ${history}`
     chancelabel.textContent = `남은 기회 : ${chance} 회`
-
+    //버튼 다시 활성화, 메인이미지 원래 이미지로 되돌림
     gameOver = false;
     playButton.disabled = false;
     mainImg.setAttribute("src","/image/main2.png")
